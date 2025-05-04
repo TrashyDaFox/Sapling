@@ -3,7 +3,7 @@ import taskListsPlugin from "markdown-it-task-lists";
 
 import { ThemeConfig } from "./theme";
 import languages from "./theme/languages";
-
+import * as shiki from "shiki";
 import head, { transformHead } from "./head";
 import redirects from "./redirects";
 import tags from "./tags";
@@ -13,7 +13,18 @@ const excludedPages = [
 ];
 
 const isFastBuild = process.env.FAST_BUILD?.trim() === "true";
-
+const highlighter = shiki.createHighlighterCoreSync({
+  engine: shiki.createJavaScriptRegexEngine(),
+  themes: themes,
+  langs: languages,
+});
+const themes = [] as shiki.ThemeRegistration[];
+for await (const theme of Object.values(shiki.bundledThemes)) {
+  themes.push((await theme()).default);
+}
+for await (const language of Object.values(shiki.bundledLanguages)) {
+  languages.push((await language()).default[0]);
+}
 const largePages = [
   "entities/vanilla-usage-components.md",
   "entities/vanilla-usage-spawn-rules.md",
@@ -44,8 +55,8 @@ export default defineConfigWithTheme<ThemeConfig>({
   ignoreDeadLinks: isFastBuild,
 
   themeConfig: {
-    url: "https://wiki.bedrock.dev",
-    repository: "https://github.com/Bedrock-OSS/bedrock-wiki",
+    url: "https://leaf.trashdev.org",
+    repository: "https://github.com/TrashyDaFox/Sapling",
 
     algolia: {
       appId: "N9ZHAYJQII",
@@ -64,12 +75,12 @@ export default defineConfigWithTheme<ThemeConfig>({
         link: "/contribute",
       },
       {
-        text: "bedrock.dev",
-        link: "https://bedrock.dev",
+        text: "MCBETools",
+        link: "https://mcbetools.com/s/leaf",
       },
       {
-        text: "MS Learn",
-        link: "https://learn.microsoft.com/minecraft/creator/",
+        text: "Github",
+        link: "https://github.com/TrashyDaFox/Leaf",
       },
     ],
 
@@ -93,6 +104,7 @@ export default defineConfigWithTheme<ThemeConfig>({
     },
     config(md) {
       md.use(taskListsPlugin, { label: true });
+
     },
   },
 

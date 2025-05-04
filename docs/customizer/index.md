@@ -5,6 +5,12 @@ categories:
       color: blue
     - title: Advanced
       color: pink
+    - title: Miscellaneous
+      color: purple
+    - title: Essentials
+      color: orange
+    - title: Extensions
+      color: yellow
 ---
 
 <CardGrid>

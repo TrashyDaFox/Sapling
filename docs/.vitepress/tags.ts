@@ -14,6 +14,7 @@ export default {
   },
   deprecated: {
     color: "red",
+    sidebar: true
   },
   easy: {
     color: "blue",

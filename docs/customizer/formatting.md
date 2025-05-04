@@ -3,9 +3,9 @@ title: Formatting
 category: Basics
 ---
 
-The formatting system can be used in anything, from sidebars, to UIs, and even nametags and chat customization
+<template-Stub />
 
-# Formatting System
+The formatting system can be used in anything, from sidebars, to UIs, and even nametags and chat customization
 
 | Placeholder                   | Description                                                               |
 |------------------------------|---------------------------------------------------------------------------|
@@ -74,3 +74,33 @@ seperator = the text between each rank (if multiple)
 If the player has 3 ranks: Rank1, Rank2, Rank3 and the seperator is "; " the output will be:
 
 Rank1; Rank2; Rank3
+
+## Clans
+
+```leafformat
+{{clan "text if player is in clan" "text if player is not in clan (optional)"}}
+```
+
+### Examples
+
+<CodeHeader>
+    Show clan name and level
+</CodeHeader>
+
+```leafformat
+{{clan "§a[@CLAN] §7§r| §r§aLvl. [@LVL]" "§7No Clan"}}
+```
+
+Output:
+
+> FoxCult | Lvl. 0
+
+## Has Tag
+
+```leafformat
+{{has_tag "text if player has tag" "text if player does not have tag"}}
+
+OR:
+
+{{has_tag "text if player has tag" "<bl>"}} - No text if player does not have tag
+```

@@ -18,6 +18,7 @@ import Tag from "./components/content/Tag.vue";
 import WikiImage from "./components/content/WikiImage.vue";
 import YouTubeEmbed from "./components/content/YouTubeEmbed.vue";
 import template_Stub from "./components/content/template-Stub.vue";
+import template_InDevelopment from "./components/content/template-InDevelopment.vue";
 import msgbox from "./components/content/msgbox.vue";
 
 const contentComponents: Record<string, Component> = {
@@ -34,6 +35,7 @@ const contentComponents: Record<string, Component> = {
   WikiImage,
   YouTubeEmbed,
   "template-Stub": template_Stub,
+  "template-InDevelopment": template_InDevelopment,
   msgbox,
 };
 

@@ -250,7 +250,6 @@ texture.my_value
 
 `Ctrl + Space`
 
-![](/assets/images/contribute/snippets/snippets.png)
 
 ## Spoilers
 
