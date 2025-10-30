@@ -1,5 +1,7 @@
 ---
 title: Bans
+mentions:
+    - HybridProGithub
 ---
 
 # Bans

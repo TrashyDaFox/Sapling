@@ -22,7 +22,7 @@ const isLicensePage = computed(() => page.value.relativePath.startsWith("license
 
 <template>
   <article>
-    <h1>{{ frontmatter.title }}</h1>
+    <h1 v-if="frontmatter.show_title ?? true">{{ frontmatter.title }}</h1>
 
     <div v-if="frontmatter.tags !== undefined" style="margin-block: 1em">
       <Tag v-for="name in frontmatter.tags" :key="name" :name />

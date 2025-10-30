@@ -2,9 +2,9 @@
 import "./styles/index.scss";
 import { Theme } from "vitepress";
 import { Component } from "vue";
-
+// import "@catppuccin/vitepress/theme/mocha/green.css";
 import Layout from "./components/Layout.vue";
-
+// import DefaultTheme from "vitepress/theme";
 import Button from "./components/content/Button.vue";
 import Card from "./components/content/Card.vue";
 import CardGrid from "./components/content/CardGrid.vue";
@@ -19,6 +19,7 @@ import WikiImage from "./components/content/WikiImage.vue";
 import YouTubeEmbed from "./components/content/YouTubeEmbed.vue";
 import template_Stub from "./components/content/template-Stub.vue";
 import template_InDevelopment from "./components/content/template-InDevelopment.vue";
+import template_ServerList from "./components/template-ServerList.vue";
 import msgbox from "./components/content/msgbox.vue";
 
 const contentComponents: Record<string, Component> = {
@@ -36,12 +37,16 @@ const contentComponents: Record<string, Component> = {
   YouTubeEmbed,
   "template-Stub": template_Stub,
   "template-InDevelopment": template_InDevelopment,
+  "template-ServerList": template_ServerList,
   msgbox,
 };
 
 export default {
+  // Layout,
   Layout,
-  enhanceApp({ app }) {
+  enhanceApp(ctx) {
+    let { app } = ctx;
+    // DefaultTheme.enhanceApp(ctx);
     for (const name in contentComponents) {
       app.component(name, contentComponents[name]);
     }

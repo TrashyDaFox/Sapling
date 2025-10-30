@@ -1,49 +1,58 @@
 :root {
-  --light-accent-color: #2979c4;
-  --dark-accent-color: #6aaff0;
+  /* default accent — lavender */
+  --light-accent-color: #7287fd;
+  --dark-accent-color: #b4befe;
 }
 
+/* 🍓 Red (Catppuccin Mocha red / maroon) */
 [data-accent-color="red"] {
-  --light-accent-color: #fdb7b7;
-  --dark-accent-color: #862020;
+  --light-accent-color: #f38ba8;
+  --dark-accent-color: #c94f6d;
 }
 
+/* 🍇 Mauve / Purple */
 [data-accent-color="purple"] {
-  --light-accent-color: #e3b7fd;
-  --dark-accent-color: #5e2086;
+  --light-accent-color: #cba6f7;
+  --dark-accent-color: #945bdc;
 }
 
+/* 💖 Pink / Flamingo */
 [data-accent-color="pink"] {
-  --light-accent-color: #ffe6f0;
-  --dark-accent-color: #f4a6c1;
+  --light-accent-color: #f5c2e7;
+  --dark-accent-color: #d97ac8;
 }
 
-
+/* 🍊 Peach / Orange */
 [data-accent-color="orange"] {
-  --light-accent-color: #fdc890;
-  --dark-accent-color: #993717;
+  --light-accent-color: #fab387;
+  --dark-accent-color: #e49354;
 }
 
+/* 🌼 Yellow */
 [data-accent-color="yellow"] {
-  --light-accent-color: #ffdf76;
-  --dark-accent-color: #fbbf24;
+  --light-accent-color: #f9e2af;
+  --dark-accent-color: #e8c878;
 }
 
+/* 🌿 Green */
 [data-accent-color="green"] {
-  --light-accent-color: #6ee7b7;
-  --dark-accent-color: #077556;
+  --light-accent-color: #a6e3a1;
+  --dark-accent-color: #6fbf6b;
 }
 
+/* 💙 Blue / Sapphire */
 [data-accent-color="blue"] {
-  --light-accent-color: #93c5fd;
-  --dark-accent-color: #2849a3;
+  --light-accent-color: #89b4fa;
+  --dark-accent-color: #739df5;
 }
 
-[data-accent-color="purple"] {
-  --light-accent-color: #e1b3ff;
-  --dark-accent-color: #74129b;
+/* 🪻 Lavender (default-ish) */
+[data-accent-color="lavender"] {
+  --light-accent-color: #b4befe;
+  --dark-accent-color: #a6afff;
 }
 
+/* 🌸 Assign final accent vars */
 * {
   --accent-color: var(--light-accent-color);
 }

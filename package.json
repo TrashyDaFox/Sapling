@@ -39,6 +39,7 @@
 		"vue-eslint-parser": "^9.4.3"
 	},
 	"dependencies": {
+		"@catppuccin/vitepress": "^0.1.2",
 		"markdown-it": "^14.1.0"
 	}
 }

@@ -1,7 +1,8 @@
 :root {
-  --bg-color: rgb(243, 243, 243);
-  --light-bg-color: rgb(251, 251, 251);
-  --nav-bg-color: rgba(252, 252, 252, 0.8);
+  /* 🌸 Catppuccin Mocha (Light variables for light mode) */
+  --bg-color: #f5e0dc; /* rosewater-ish background */
+  --light-bg-color: #f2cdcd; /* slightly lighter accent bg */
+  --nav-bg-color: rgba(242, 205, 205, 1.0);
   --nav-bg-blur: blur(16px);
 
   --sidebar-visibility-transition-duration: 0.2s;
@@ -10,26 +11,12 @@
   --sidebar-width: 270px;
   --outline-width: 300px;
 
-  --border-radius: 10px;
+  --border-radius: 20px;
 
-  --border-color: #e5e5e5;
-  --border: 1px solid var(--border-color);
-}
+  --border-color: #dce0e8;
+  --border: 0px solid var(--border-color);
 
-.dark {
-  --bg-color: rgb(25, 25, 28);
-  --light-bg-color: rgb(30, 30, 33);
-  --nav-bg-color: rgb(31, 31, 34, 0.8);
-  --border-color: #2e2e32;
-
-  color: #fff;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-:root {
+  color: #4c4f69; /* text color */
   background-color: var(--bg-color);
   scrollbar-color: var(--border-color) transparent;
 
@@ -50,4 +37,35 @@
     Segoe UI Symbol,
     "Noto Color Emoji";
   line-height: 1.5;
+}
+
+/* 🌙 Dark mode — Catppuccin Mocha */
+.dark {
+  --bg-color: #1e1e2e;
+  --light-bg-color: #181825;
+  --nav-bg-color: rgba(30, 30, 46, 0.8);
+  --border-color: #313244;
+
+  --text-color: #cdd6f4;
+  --text-muted: #a6adc8;
+  --accent-color: #cba6f7;
+  --highlight-color: #f38ba8;
+
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* 🐾 General Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* 🩵 Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 10px;
 }
