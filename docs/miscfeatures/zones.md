@@ -1,7 +1,9 @@
 ---
-title: Zones
+title: Zones (Old Docs)
 category: World Utilities
 ---
+
+New docs are [HERE](/zones)
 
 ## Creating Zones
 

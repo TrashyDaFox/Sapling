@@ -3,59 +3,95 @@ title: Formatting
 category: Basics
 ---
 
-<template-Stub />
-
 The formatting system can be used in anything, from sidebars, to UIs, and even nametags and chat customization
 
-| Placeholder                   | Description                                                               |
-|------------------------------|---------------------------------------------------------------------------|
-| `<drj>`                      | Default rank joiner, useful for chat rank formats                         |
-| `<msg>`                      | Player's message (only available in chat rank formats)                    |
-| `<rc>`                       | Default rank color                                                        |
-| `<nc>`                       | Name color                                                                |
-| `<bc>`                       | Bracket color                                                             |
-| `<mc>`                       | Message color                                                             |
-| `<x>` `<y>` `<z>`            | Player's coordinates                                                      |
-| `<name>`                     | Player's name                                                             |
-| `<username>`                 | Alternative way to show player's name                                     |
-| `<name_tag>`                 | Player's nametag (not available in nametags+)                             |
-| `<xp>`                       | Player's XP                                                               |
-| `<level>`                    | Player's XP level                                                         |
-| `<hp>`                       | Player's HP                                                               |
-| `<hp_max>`                   | Player's max HP (default 20)                                              |
-| `<hp_min>`                   | Player's min HP (always 0)                                                |
-| `<hp_default>`               | Player's default HP (should equal max)                                    |
-| `<rank>`                     | Player's rank                                                             |
-| `<kills>`                    | Player's kill count                                                       |
-| `<deaths>`                   | Player's death count                                                      |
-| `<blocks_broken>`            | Player's broken block count                                               |
-| `<blocks_placed>`            | Player's placed block count                                               |
-| `<cps>`                      | Player's CPS (clicks per second)                                          |
-| `<clanID>`                   | Player's clan ID (not super useful)                                       |
-| `<k/d>`                      | Player's kill/death ratio                                                 |
-| `<claim>`                    | Land claim/zone the player is in                                          |
-| `<tps>`                      | Server's TPS                                                              |
-| `<online>`                   | Number of online players                                                  |
-| `<day>`                      | In-game days                                                              |
-| `<yr>`                       | Current year                                                              |
-| `<mo>`                       | Current month (number form)                                               |
-| `<mo/n>`                     | Current month (name form)                                                 |
-| `<m>`                        | Current minute                                                            |
-| `<h>`                        | Current hour (UTC)                                                        |
-| `<s>`                        | Current seconds                                                           |
-| `<ms>`                       | Current milliseconds                                                      |
-| `<d>`                        | Current IRL day                                                           |
-| `<dra>`                      | Double right arrow character                                              |
-| `<lra>`                      | Double left arrow character                                               |
-| `<moonPhase>`                | Current moon phase                                                        |
-| `<h/12>`                     | Current hour (12-hour format)                                             |
-| `<am/pm>`                    | AM or PM                                                                  |
-| `<days_played>`              | Total days the player has played                                          |
-| `<hours_played>`             | Total hours the player has played                                         |
-| `<minutes_played>`           | Total minutes the player has played                                       |
-| `<seconds_played>`           | Total seconds the player has played                                       |
-| <code v-pre>{{score objective}}</code>      | Player's score for given objective |
-| <code v-pre>{{scoreshort objective}}</code> | Player's score (shortened, e.g., 1.2k) |
+<div v-pre>
+
+| Placeholder             | Description                |
+| ----------------------- | -------------------------- |
+| `<name>` / `<username>` | Player name                |
+| `<name_tag>`            | Player name tag            |
+| `<rank>`                | Player’s first rank        |
+| `<bc>`                  | Bracket color              |
+| `<nc>`                  | Name color                 |
+| `<mc>`                  | Message color              |
+| `<x> <y> <z>`           | Player coordinates         |
+| `<dID>`                 | Dimension ID               |
+| `<hp>`                  | Current health             |
+| `<hp_max>`              | Max health                 |
+| `<hp_min>`              | Min health                 |
+| `<hp_default>`          | Default health             |
+| `<healthbar>`           | Health bar                 |
+| `<xp>`                  | XP progress                |
+| `<level>`               | Player XP level            |
+| `<kills>`               | Total kills                |
+| `<deaths>`              | Total deaths               |
+| `<biome>`               | Current biome              |
+| `<dimension>`               | Current dimension              |
+| `<netherX>`               | What the player's X coordinate would be in the nether              |
+| `<netherZ>`               | What the player's Z coordinate would be in the nether              |
+| `<overworldX>`               | What the player's X coordinate would be in the overworld              |
+| `<overworldZ>`               | What the player's Z coordinate would be in the overworld              |
+| `<kills_streak>`        | Current kill streak        |
+| `<k/d>`                 | Kill / Death ratio         |
+| `<cps>`                 | Clicks per second          |
+| `<blocks_broken>`       | Blocks broken              |
+| `<blocks_placed>`       | Blocks placed              |
+| `<seconds_played>`      | Seconds played             |
+| `<minutes_played>`      | Minutes played             |
+| `<hours_played>`        | Hours played               |
+| `<days_played>`         | Days played                |
+| `<weeks_played>`        | Days / 7                   |
+| `<years_played>`        | Days / 365                 |
+| `<total_hours_played>`  | Total hours played         |
+| `<clan>`                | Player clan                |
+| `<clanID>`              | Clan ID (internal UI use)  |
+| `<online>`              | Players online             |
+| `<public_clan_count>`   | Public clans count         |
+| `<claim>`               | Current land claim         |
+| `<currencies>`          | All currencies (formatted) |
+| `<chunkX>`          | Player's chunk X coordinates |
+| `<chunkZ>`          | Player's chunk Z coordinates |
+| `<chunkInX>`          | Player's X coordinates relative to the chunk |
+| `<chunkInZ>`          | Player's Z coordinates relative to the chunk |
+| `<tps>`                 | Server TPS                 |
+| `<lv>`                  | Leaf version               |
+| `<servername>`          | Server name                |
+| `<yr>`                  | Current year               |
+| `<mo>`                  | Month number               |
+| `<mo/n>`                | Month name                 |
+| `<d>`                   | Day of month               |
+| `<h>`                   | Hour (24h, UTC)            |
+| `<h/12>`                | Hour (12h, UTC)            |
+| `<am/pm>`               | AM / PM                    |
+| `<m>`                   | Minute                     |
+| `<s>`                   | Second                     |
+| `<ms>`                  | Millisecond                |
+| `<day>`                 | In-game day                |
+| `<moonPhase>`           | Moon phase                 |
+| `<dra>`                 | »                          |
+| `<dla>`                 | «                          |
+| `<drj>`                 | Default rank joiner        |
+| `<randomShit>`          | Random number              |
+| `{{L <id>}}`                           | Length of internal variable |
+| `{{D <id>}}`                           | Value of internal variable  |
+| `{{rank_joiner "<joiner>"}}`           | Joins ranks with separator  |
+| `{{alternate "<text>" "<codes>"}}`     | Alternating colors          |
+| `{{score "<objective>"}}`              | Player score                |
+| `{{score2 "<objective>"}}`             | Fake player score           |
+| `{{scoreshort "<objective>"}}`         | Shortened player score      |
+| `{{scoreshort2 "<objective>"}}`        | Shortened fake score        |
+| `{{is_afk "<t1>" "<t2>"}}`             | AFK check                   |
+| `{{has_tag "<tag>" "<t1>" "<t2>"}}`    | Tag check                   |
+| `{{vars}}`                             | All variable names (legacy) |
+| `{{clan_owner "<t1>" "<t2>"}}`         | Clan owner check            |
+| `{{activityscore}}`                    | Chunk activity score        |
+| `{{clan "<t1>" "<t2>"}}`               | Clan check                  |
+| `{{get_tag "<prefix>" "<t1>" "<t2>"}}` | Prefix tag check            |
+| `{{gay "<text>"}}`                     | Rainbow text             |
+| `{{trans "<text>"}}`                   | Trans pride colors, because why not   |
+
+</div>
 
 ## Examples
 

@@ -36,4 +36,8 @@ title: Leaf Not Working on Realms
 
 ---
 
-If you have any other methods, please dm @ashypawzowo on discord!
+Sometimes realms can be weird with adding leafs resource pack, so sometimes you'll just have to try repeatedly. It is recommended not to add leaf directly into the realm via settings, and instead download the world and add it there, and upload the world.
+
+---
+
+If you have any other methods, please dm @trashydafox on discord!
