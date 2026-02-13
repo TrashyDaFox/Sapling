@@ -24,4 +24,4 @@ In the zones edit menu, you have 3 buttons for teleporting:
 - Center
 
 Pos1 is the first corner set in the zone settings, while Pos2 is the second.
-Center is the calculated center between those 2 corners
+Center is the calculated center between those 2 corners.
