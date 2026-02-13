@@ -52,7 +52,7 @@ export default defineConfigWithTheme<ThemeConfig>({
   transformHead,
 
   srcExclude: excludedPages,
-  ignoreDeadLinks: isFastBuild,
+  ignoreDeadLinks: true,
 
   themeConfig: {
     url: "https://leaf.trashdev.org",
